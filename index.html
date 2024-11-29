@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        div{
+            height: 520px;
+            width:330px;
+            border: 1px solid;
+            margin-left: 660px;
+            margin-top: 150px;
+
+        }
+        button{
+            width:100px;
+            height:50px;
+            margin:1px;
+            background-color: hwb(203 0% 0% / 0.786);
+            color: black;
+        }
+        #s1{
+            width:190px;
+        }
+        #s2{
+            width:120px;
+        }
+        input{
+            height: 50px;
+            background-color: white;
+            border: 1px solid;
+        }
+
+        #main{
+            background-color: rgba(245, 245, 245, 0.288);
+        }
+
+        body {
+        background-image: url('img/ee.jpg');
+        background-size: cover; /* Ensures the image covers the entire element */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center; /* Centers the image */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <span class="bi bi-calculator" style="background-color: aqua;">CALCULATOR &nbsp <marquee>let's Calculate</marquee></span><BR>
+    <input id="screen" size="38px"  disabled>
+    <br><br>
+    <span>
+    <button onclick="addValue(1)">1</button>&nbsp;
+    <button onclick="addValue(2)">2</button>&nbsp;
+    <button onclick="addValue(3)">3</button> 
+    </span><br>
+    <span>
+    <button onclick="addValue(4)">4</button>&nbsp;
+    <button onclick="addValue(5)">5</button>&nbsp;
+    <button onclick="addValue(6)">6</button>
+   </span><br>
+   <span>
+    <button onclick="addValue(7)">7</button>&nbsp;
+    <button onclick="addValue(8)">8</button>&nbsp;
+    <button onclick="addValue(9)">9</button>
+   </span><br>
+   <span>
+    <button onclick="addValue(0)">0</button>&nbsp;
+    <button onclick="addValue('.')">.</button>&nbsp;
+    <button onclick="addValue('+')">+</button>
+   </span><br>
+   <span>
+    <button onclick="addValue('-')">-</button>&nbsp;
+    <button onclick="addValue('*')">*</button>&nbsp;
+    <button onclick="addValue('/')">/</button>
+   </span><br>
+   <span>
+    <button onclick="addValue('%')">%</button>&nbsp;
+    <button onclick="addValue('**2')">p2</button>&nbsp;
+    <button onclick="addValue('**3')">p3</button>
+   </span><br><br>
+   <span>
+    <button id="s1" onclick="calCulate()"> = </button>&nbsp;
+    <button id="s2" onclick="reSet()">reset</button>
+   </span>
+    </div>
+    
+    <script>
+        function addValue(val)
+        {
+            let v = document.getElementById("screen");
+            v.value=v.value+val;
+
+        }
+
+        function calCulate()
+        {
+            let v = document.getElementById("screen").value;
+            let result=eval(v);
+            document.getElementById("screen").value=result;
+
+        
+
+        }
+        
+        function reSet()
+        {
+            window.location="1CAL.html";
+        }
+
+
+    </script>
+</body>
+</html>
